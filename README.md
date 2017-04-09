@@ -1,4 +1,4 @@
-# package-json-to-readme [![Build Status](https://travis-ci.org/zeke/package-json-to-readme.svg?branch=master)](https://travis-ci.org/zeke/package-json-to-readme)
+# documentize
 
 Generate a README.md from package.json contents. Works with node and io.js.
 
@@ -18,7 +18,7 @@ With npm modules, most of that info can be gleaned from properties in the `packa
 ## Installation
 
 ```sh
-npm i -g package-json-to-readme
+npm i -g documentize
 ```
 
 ## Usage

@@ -1,5 +1,5 @@
 {
-  "name": "package-json-to-readme",
+  "name": "documentize",
   "version": "2.0.0",
   "description": "Generate a README.md from package.json contents",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "markdown",
     "documentation"
   ],
-  "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com/)",
+  "author": "Paweł Sieniarski <paabson@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "github-url-to-object": "^1.6.0",
@@ -24,8 +24,7 @@
     "yargs": "^3.0.4"
   },
   "bin": {
-    "package-json-to-readme": "index.js",
-    "readme": "index.js"
+    "documetize": "index.js"
   },
   "preferGlobal": true,
   "devDependencies": {
