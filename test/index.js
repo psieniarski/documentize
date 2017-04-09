@@ -126,11 +126,11 @@ describe('readme', function () {
   })
 
   describe('--template flag', function () {
-    it("use a custom template", function (done) {
+    it('use a custom template', function (done) {
       nixt()
-        .run('./index.js test/fixtures/local/package.json --template test/fixtures/template/README.md')
+        .run('./index.js test/fixtures/local/package.json --template test/fixtures/template/template.md')
         .stdout(/Custom template/)
         .end(done)
-    });
+    })
   })
 })

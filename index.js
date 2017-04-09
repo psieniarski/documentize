@@ -92,7 +92,9 @@ var getDeps = function (deps) {
 if (pkg.dependencies) pkg.depDetails = getDeps(pkg.dependencies)
 if (pkg.devDependencies) pkg.devDepDetails = getDeps(pkg.devDependencies)
 
-templatePath = path.join(__dirname, argv.template || 'template.md')
+templatePath = path.join(__dirname, 'template.md')
+if (argv.template) {
+  templatePath = argv.template
+}
 template = hogan.compile(fs.readFileSync(templatePath).toString())
-
 process.stdout.write(template.render(pkg))
