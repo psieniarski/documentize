@@ -15,6 +15,10 @@ var argv = require('yargs')
     alias: 'travis',
     description: 'display a travis badge'
   })
+  .option('tpl', {
+    alias: 'template',
+    description: 'use a custom template'
+  })
   .option('t', {
     alias: 'test',
     description: 'include test output in readme'
@@ -26,8 +30,9 @@ var argv = require('yargs')
 var gh = require('github-url-to-object')
 var execSync = require('sync-exec')
 var stripAnsi = require('strip-ansi')
-
 var pkgPath = path.resolve(process.cwd(), argv._[0])
+var templatePath
+var template
 
 try {
   var pkg = require(pkgPath)
@@ -87,7 +92,7 @@ var getDeps = function (deps) {
 if (pkg.dependencies) pkg.depDetails = getDeps(pkg.dependencies)
 if (pkg.devDependencies) pkg.devDepDetails = getDeps(pkg.devDependencies)
 
-var templatePath = path.join(__dirname, 'template.md')
-var template = hogan.compile(fs.readFileSync(templatePath).toString())
+templatePath = path.join(__dirname, argv.template || 'template.md')
+template = hogan.compile(fs.readFileSync(templatePath).toString())
 
 process.stdout.write(template.render(pkg))

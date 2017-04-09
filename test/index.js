@@ -124,4 +124,13 @@ describe('readme', function () {
   describe('--tests flag', function () {
     it("can't easily be tested without creating an infinitely recursing test.")
   })
+
+  describe('--template flag', function () {
+    it("use a custom template", function (done) {
+      nixt()
+        .run('./index.js test/fixtures/local/package.json --template test/fixtures/template/README.md')
+        .stdout(/Custom template/)
+        .end(done)
+    });
+  })
 })

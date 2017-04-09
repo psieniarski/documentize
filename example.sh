@@ -10,6 +10,9 @@ readme package.json --travis
 # Run tests and add their output
 readme package.json --tests
 
+# Use a custom template
+readme package.json --template template.md
+
 # Do it all
 readme package.json --tests --travis > README.md
 
