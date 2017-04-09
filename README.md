@@ -25,22 +25,22 @@ npm i -g documentize
 
 ```sh
 # Write to stdout
-readme package.json
+documentize package.json
 
 # Pipe output into a new file
-readme package.json > README.md
+documentize package.json > README.md
 
 # Add a Travis badge
-readme package.json --travis
+documentize package.json --travis
 
 # Run tests and add their output
-readme package.json --tests
+documentize package.json --tests
 
 # Use a custom template
-readme package.json --template template.md
+documentize package.json --template template.md
 
 # Do it all
-readme package.json --tests --travis > README.md
+documentize package.json --tests --travis > README.md
 
 # If your package has an example.sh or example.js file, it will be used to
 # generate a usage section like this one.
