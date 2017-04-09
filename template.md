@@ -15,6 +15,8 @@ npm install {{name}} --save
 ```
 {{/private}}
 
+## API
+
 {{#usage}}
 ## Usage
 
