@@ -1,12 +1,12 @@
 {
   "name": "documentize",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Generate a README.md from package.json contents",
   "main": "index.js",
   "scripts": {
     "test": "mocha && standard"
   },
-  "repository": "https://github.com/zeke/package-json-to-readme",
+  "repository": "https://github.com/psieniarski/documentize",
   "keywords": [
     "package.json",
     "readme",

@@ -13,7 +13,7 @@ Every project worth its salt has a README that answers (at least) the following 
 - How do I test it?
 - What is the license?
 
-With npm modules, most of that info can be gleaned from properties in the `package.json` file: `name`, `description`, `scripts.test`, `preferGlobal`, etc. That's why `package-json-to-readme` exists. Use it to generate a decent boilerplate README, then iterate from there.
+With npm modules, most of that info can be gleaned from properties in the `package.json` file: `name`, `description`, `scripts.test`, `preferGlobal`, etc. That's why `documentize` exists. Use it to generate a decent boilerplate README, then iterate from there.
 
 ## Installation
 
